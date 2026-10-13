@@ -1,0 +1,53 @@
+{
+  "rows": 15,
+  "cols": 15,
+  "cells": [
+    { "row": 0, "col": 5, "isBlack": true },
+    { "row": 0, "col": 11, "isBlack": true },
+    { "row": 1, "col": 5, "isBlack": true },
+    { "row": 1, "col": 11, "isBlack": true },
+    { "row": 2, "col": 5, "isBlack": true },
+    { "row": 2, "col": 11, "isBlack": true },
+
+    { "row": 3, "col": 0, "isBlack": true },
+    { "row": 3, "col": 1, "isBlack": true },
+    { "row": 3, "col": 2, "isBlack": true },
+    { "row": 3, "col": 8, "isBlack": true },
+
+    { "row": 4, "col": 4, "isBlack": true },
+    { "row": 4, "col": 10, "isBlack": true },
+
+    { "row": 5, "col": 3, "isBlack": true },
+    { "row": 5, "col": 7, "isBlack": true },
+    { "row": 5, "col": 12, "isBlack": true },
+    { "row": 5, "col": 13, "isBlack": true },
+    { "row": 5, "col": 14, "isBlack": true },
+
+    { "row": 6, "col": 6, "isBlack": true },
+    { "row": 6, "col": 9, "isBlack": true },
+
+    { "row": 8, "col": 5, "isBlack": true },
+    { "row": 8, "col": 8, "isBlack": true },
+
+    { "row": 9, "col": 0, "isBlack": true },
+    { "row": 9, "col": 1, "isBlack": true },
+    { "row": 9, "col": 2, "isBlack": true },
+    { "row": 9, "col": 7, "isBlack": true },
+    { "row": 9, "col": 11, "isBlack": true },
+
+    { "row": 10, "col": 4, "isBlack": true },
+    { "row": 10, "col": 10, "isBlack": true },
+
+    { "row": 11, "col": 6, "isBlack": true },
+    { "row": 11, "col": 12, "isBlack": true },
+    { "row": 11, "col": 13, "isBlack": true },
+    { "row": 11, "col": 14, "isBlack": true },
+
+    { "row": 12, "col": 3, "isBlack": true },
+    { "row": 12, "col": 9, "isBlack": true },
+    { "row": 13, "col": 3, "isBlack": true },
+    { "row": 13, "col": 9, "isBlack": true },
+    { "row": 14, "col": 3, "isBlack": true },
+    { "row": 14, "col": 9, "isBlack": true }
+  ]
+}
