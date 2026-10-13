@@ -12,13 +12,13 @@
   background-color: #333;
   border: 2px solid #333;
   max-height: 75vh;
-  overflow: auto; 
+  overflow: auto;
 }
 
 .cell {
   position: relative;
   background-color: white;
-  width: 35px; 
+  width: 35px;
   height: 35px;
   display: flex;
   align-items: center;
@@ -36,13 +36,18 @@
   text-align: center;
   font-size: 1rem;
   font-weight: bold;
+  color: #000;
   background: transparent;
   text-transform: uppercase;
 }
 
-.white-cell input:focus {
-  outline: 2px solid #007bff;
+.white-cell:focus-within {
   background-color: #eef7ff;
+  box-shadow: inset 0 0 0 2px #007bff;
+}
+
+.white-cell input:focus {
+  outline: none;
 }
 
 .cell-number {
