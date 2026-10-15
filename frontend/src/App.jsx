@@ -9,7 +9,10 @@ function App() {
         <p style={{ color: '#666' }}>Sample Grid Layout (sprint 1)</p>
       </header>
       <main>
-        <Grid />
+          <Grid />
+	  <button type="button">Hint1</button>
+	  <button type="button">Hint2</button>
+	  <button type="button">Hint3</button>
       </main>
     </div>
   )
