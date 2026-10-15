@@ -1,1 +1,39 @@
-{ "id": "puzzle-1", "title": "Starter Crossword", "entries": [ { "id": "a1", "number": 1, "direction": "across", "row": 0, "col": 0, "answer": "APPLE", "clue": "A fruit that can be red or green", "hints": [ "It is often eaten as a snack.", "It starts with A and has five letters." ] }, { "id": "a2", "number": 2, "direction": "across", "row": 0, "col": 6, "answer": "TIGER", "clue": "A striped wild cat", "hints": [ "It is a large feline.", "Its name starts with T." ] }, { "id": "d1", "number": 1, "direction": "down", "row": 0, "col": 0, "answer": "CAT", "clue": "A common household pet", "hints": [ "It often says meow.", "It has three letters." ] } ] }
+{
+  "id": "puzzle-1",
+  "title": "Starter Crossword",
+  "entries": [
+    {
+      "id": "a1",
+      "number": 1,
+      "direction": "across",
+      "row": 0,
+      "col": 0,
+      "answer": "APPLE",
+      "clue": "A fruit that can be red or green",
+      "hints": [
+        "It is often eaten as a snack.",
+        "It starts with A and has five letters."
+      ]
+    },
+    {
+      "id": "a2",
+      "number": 2,
+      "direction": "across",
+      "row": 0,
+      "col": 6,
+      "answer": "TIGER",
+      "clue": "A striped wild cat",
+      "hints": ["It is a large feline.", "Its name starts with T."]
+    },
+    {
+      "id": "d1",
+      "number": 1,
+      "direction": "down",
+      "row": 0,
+      "col": 0,
+      "answer": "CAT",
+      "clue": "A common household pet",
+      "hints": ["It often says meow.", "It has three letters."]
+    }
+  ]
+}
