@@ -1,0 +1,137 @@
+{
+  "id": "puzzle-1",
+  "title": "Starter Crossword",
+  "width": 9,
+  "height": 9,
+  "answers": [
+    {
+      "answerid": "1A",
+      "wordid": 101,
+      "row": 0,
+      "col": 0,
+      "direction": "across",
+      "length": 5,
+      "cluenumber": 1,
+      "answer": "APPLE",
+      "clue": "A fruit that can be red or green",
+      "hints": [
+        "It is often eaten as a snack.",
+        "It starts with A and has five letters."
+      ]
+    },
+    {
+      "answerid": "2A",
+      "wordid": 102,
+      "row": 2,
+      "col": 2,
+      "direction": "across",
+      "length": 5,
+      "cluenumber": 2,
+      "answer": "TIGER",
+      "clue": "A large striped wild cat",
+      "hints": ["It is a large feline.", "Its name starts with T."]
+    },
+    {
+      "answerid": "3A",
+      "wordid": 103,
+      "row": 4,
+      "col": 0,
+      "direction": "across",
+      "length": 4,
+      "cluenumber": 3,
+      "answer": "STAR",
+      "clue": "A bright object visible in the night sky",
+      "hints": ["The Sun is one.", "It starts with S."]
+    },
+    {
+      "answerid": "4A",
+      "wordid": 104,
+      "row": 6,
+      "col": 2,
+      "direction": "across",
+      "length": 4,
+      "cluenumber": 4,
+      "answer": "MOON",
+      "clue": "An object that orbits Earth",
+      "hints": ["It can appear full or crescent-shaped.", "It starts with M."]
+    },
+    {
+      "answerid": "5A",
+      "wordid": 105,
+      "row": 8,
+      "col": 0,
+      "direction": "across",
+      "length": 4,
+      "cluenumber": 5,
+      "answer": "FISH",
+      "clue": "An animal that lives in water",
+      "hints": ["It usually has fins and gills.", "It starts with F."]
+    },
+    {
+      "answerid": "1D",
+      "wordid": 106,
+      "row": 0,
+      "col": 0,
+      "direction": "down",
+      "length": 4,
+      "cluenumber": 1,
+      "answer": "AREA",
+      "clue": "A region or measured surface",
+      "hints": ["It can be measured in square units.", "It starts with A."]
+    },
+    {
+      "answerid": "2D",
+      "wordid": 107,
+      "row": 0,
+      "col": 2,
+      "direction": "down",
+      "length": 5,
+      "cluenumber": 2,
+      "answer": "PLANT",
+      "clue": "A living thing that often grows in soil",
+      "hints": ["It may have leaves and roots.", "It starts with P."]
+    },
+    {
+      "answerid": "3D",
+      "wordid": 108,
+      "row": 0,
+      "col": 4,
+      "direction": "down",
+      "length": 5,
+      "cluenumber": 3,
+      "answer": "EAGER",
+      "clue": "Very excited or enthusiastic",
+      "hints": [
+        "It describes someone who is keen to do something.",
+        "It starts with E."
+      ]
+    },
+    {
+      "answerid": "4D",
+      "wordid": 109,
+      "row": 2,
+      "col": 3,
+      "direction": "down",
+      "length": 5,
+      "cluenumber": 4,
+      "answer": "GRAPE",
+      "clue": "A small fruit often used to make raisins",
+      "hints": ["It can be green or purple.", "It starts with G."]
+    },
+    {
+      "answerid": "5D",
+      "wordid": 110,
+      "row": 4,
+      "col": 0,
+      "direction": "down",
+      "length": 5,
+      "cluenumber": 5,
+      "answer": "SMILE",
+      "clue": "A happy expression made with your mouth",
+      "hints": [
+        "People often make one when they are happy.",
+        "It starts with S."
+      ]
+    }
+  ]
+}
