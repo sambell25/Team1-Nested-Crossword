@@ -8,6 +8,7 @@
     "build": "vite build",
     "lint": "eslint .",
     "format:check": "prettier --check --single-quote --no-semi .",
+    "format": "prettier --write --single-quote --no-semi .",
     "preview": "vite preview",
     "test": "vitest run",
     "test:coverage": "vitest run --coverage"

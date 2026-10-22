@@ -1,21 +1,22 @@
 import Grid from './components/Grid'
+import HintPanel from './components/HintPanel'
 import './App.css'
 
 function App() {
   return (
     <div className="App">
       <header style={{ textAlign: 'center', margin: '20px 0' }}>
-        <h1>Crossword Grid</h1>
-        <p style={{ color: '#666' }}>Sample Grid Layout (sprint 1)</p>
+        <h1>WordNest Crossword</h1>
       </header>
-      <main>
-        <Grid />
-        <button type="button">Hint1</button>
-        <button type="button">Hint2</button>
-        <button type="button">Hint3</button>
+      <main className="layout">
+        <section className="layout-grid">
+          <Grid />
+        </section>
+        <aside className="layout-hints">
+          <HintPanel />
+        </aside>
       </main>
     </div>
   )
 }
-
 export default App
