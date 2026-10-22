@@ -10,6 +10,9 @@ function App() {
       </header>
       <main>
         <Grid />
+        <button type="button">Hint1</button>
+        <button type="button">Hint2</button>
+        <button type="button">Hint3</button>
       </main>
     </div>
   )
