@@ -1,3 +1,27 @@
+.layout {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 32px;
+  align-items: start;
+  padding: 0 24px;
+}
+
+.layout-hints {
+  max-height: 80vh;
+  overflow-y: auto;
+  text-align: left;
+}
+
+.clue {
+  margin-bottom: 16px;
+}
+
+@media (max-width: 900px) {
+  .layout {
+    grid-template-columns: 1fr;
+  }
+}
+
 .counter {
   font-size: 16px;
   padding: 5px 10px;
@@ -181,4 +205,18 @@
     right: 0;
     border-right-color: var(--border);
   }
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: auto 1fr; /* grid on left, hints take the rest */
+  gap: 32px;
+  align-items: start;
+  padding: 0 24px;
+}
+.layout-hints { max-height: 80vh; overflow-y: auto; text-align: left; }
+.clue { margin-bottom: 16px; }
+
+@media (max-width: 900px) {
+  .layout { grid-template-columns: 1fr; } /* stack on small screens */
 }
