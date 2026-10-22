@@ -214,9 +214,17 @@
   align-items: start;
   padding: 0 24px;
 }
-.layout-hints { max-height: 80vh; overflow-y: auto; text-align: left; }
-.clue { margin-bottom: 16px; }
+.layout-hints {
+  max-height: 80vh;
+  overflow-y: auto;
+  text-align: left;
+}
+.clue {
+  margin-bottom: 16px;
+}
 
 @media (max-width: 900px) {
-  .layout { grid-template-columns: 1fr; } /* stack on small screens */
+  .layout {
+    grid-template-columns: 1fr;
+  } /* stack on small screens */
 }

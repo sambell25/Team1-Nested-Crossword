@@ -9,8 +9,12 @@ function App() {
         <h1>WordNest Crossword</h1>
       </header>
       <main className="layout">
-        <section className="layout-grid"><Grid /></section>
-        <aside className="layout-hints"><HintPanel /></aside>
+        <section className="layout-grid">
+          <Grid />
+        </section>
+        <aside className="layout-hints">
+          <HintPanel />
+        </aside>
       </main>
     </div>
   )
