@@ -1,477 +1,477 @@
 {
-    "CARPENTER": [
-        { 
-            "CARPENTER": "A person who builds with wood" 
-        },
-        {
-            "CARP": "To complain continuously",
-            "PEN": "A tool used for writing with ink"
-        }
-    ],
-    "CANDIDATE": [
-        { 
-            "CANDIDATE": "Someone applying for a job or office" 
-        },
-        {
-            "CAN": "A metal container",
-            "DID": "Performed an action",
-            "ATE": "Consumed food"
-        }
-    ],
-    "PLATFORM": [
-        { 
-            "PLATFORM": "A raised surface to stand on" 
-        },
-        {
-            "PLAT": "A plot of land or map",
-            "FORM": "The shape or structure of something"
-        }
-    ],
-    "PINEAPPLE": [
-        { 
-            "PINEAPPLE": "A tropical fruit with spiky skin" 
-        },
-        {
-            "PINE": "An evergreen tree with needles",
-            "APPLE": "A common crisp, round fruit"
-        }
-    ],
-    "MUSHROOM": [
-        { 
-            "MUSHROOM": "A fungus with an umbrella-shaped cap" 
-        },
-        {
-            "MUSH": "Soft, wet pulp",
-            "ROOM": "An enclosed space in a building"
-        }
-    ],
-    "FANTASY": [
-        { 
-            "FANTASY": "An imaginative or magical idea" 
-        },
-        {
-            "FAN": "An admirer, or a device that blows air",
-            "ANT": "A small crawling insect"
-        }
-    ],
-    "ABSOLUTE": [
-        { 
-            "ABSOLUTE": "Complete and total"
-        },
-        {
-            "SOL": "The sun or a musical note",
-            "LUTE": "An old stringed instrument"
-        }
-    ],
-    "ALPHABET": [
-        { 
-            "ALPHABET": "A set of letters used to write a language" 
-        },
-        {
-            "ALPHA": "The first letter of the Greek alphabet",
-            "BET": "A wager on an outcome"
-        }
-    ],
-    "PASSENGER": [
-        { 
-            "PASSENGER": "A traveler riding in a vehicle" 
-        },
-        {
-            "PASS": "To go past or move forward"
-        }
-    ],
-    "DISCOVERY": [
-        {
-            "DISCOVERY": "Finding something new or hidden"
-        },
-        {
-            "DISCO": "A genre of dance music",
-            "VERY": "To a high degree"
-        }
-    ],
-    "PORTRAIT": [
-        {
-            "PORTRAIT": "A picture or painting of a person"
-        },
-        {
-            "PORT": "A harbor for ships",
-            "TRAIT": "A distinguishing characteristic"
-        }
-    ],
-    "SENTIMENT": [
-        {
-            "SENTIMENT": "An opinion, view, or feeling"
-        },
-        {
-            "SENT": "Dispatched to a destination",
-            "MEN": "Adult human males"
-        }
-    ],
-    "INTERNET": [
-        {
-            "INTERNET": "A global computer network"
-        },
-        {
-            "INTER": "Between or among",
-            "NET": "A mesh fabric used for catching things"
-        }
-    ],
-    "ORCHESTRA": [
-        {
-            "ORCHESTRA": "A large group of musicians playing together"
-        },
-        {
-            "CHEST": "The front part of the torso",
-            "STAR": "A luminous point in the night sky"
-        }
-    ],
-    "HERITAGE": [
-        {
-            "HERITAGE": "Valued traditions passed down over generations"
-        },
-        {
-            "HER": "Female pronoun",
-            "AGE": "The length of time lived",
-            "TAG": "A small label attached to an item"
-        }
-    ],
-    "SPECTRUM": [
-        {
-            "SPECTRUM": "A band of colors or a broad range"
-        },
-        {
-            "SPEC": "Short for specification or spectacle",
-            "RUM": "A distilled liquor made from sugarcane"
-        }
-    ],
-    "PANTHEON": [
-        {
-            "PANTHEON": "A group of particularly respected individuals"
-        },
-        {
-            "PAN": "A flat container used for cooking",
-            "THE": "Denoting a specific person or thing"
-        }
-    ],
-    "SIGNATURE": [
-        {
-            "SIGNATURE": "A person's name written in their own handwriting"
-        },
-        {
-            "SIGN": "A notice bearing information or a direction",
-            "NATURE": "The physical world and living things"
-        }
-    ],
-    "AVALANCHE": [
-        {
-            "AVALANCHE": "A mass of snow sliding down a mountain"
-        },
-        {
-            "LAN": "Local Area Network"
-        }
-    ],
-    "PORTABLE": [
-        {
-            "PORTABLE": "Easily carried or moved"
-        },
-        {
-            "PORT": "A harbor for ships",
-            "ABLE": "Having the power, skill, or means"
-        }
-    ],
-    "SCAVENGER": [
-        {
-        "SCAVENGER": "An animal or person that searches for usable items"
-        },
-        {
-            "CAVE": "A naturally occuring underground hollow",
-            "AVENGE": "to punish a person for a wrong done to you"
-        }
-    ],
-     "NOTEBOOK": [
-        {
-            "NOTEBOOK": "A book used for writing notes"
-        },
-        {
-            "NOTE": "A short written message",
-            "BOOK": "A set of pages bound together"
-        }
-    ],
-    "SUNFLOWER": [
-        {
-            "SUNFLOWER": "A tall plant with a large yellow flower"
-        },
-        {
-            "SUN": "The star that gives Earth light",
-            "FLOW": "To move smoothly like water",
-            "LOW": "Not high"
-        }
-    ],
-    "BUTTERFLY": [
-        {
-            "BUTTERFLY": "An insect with colorful wings"
-        },
-        {
-            "BUTTER": "A yellow spread made from cream",
-            "FLY": "An insect with wings"
-        }
-    ],
-    "BACKPACK": [
-        {
-            "BACKPACK": "A bag carried on the back"
-        },
-        {
-            "BACK": "The rear part of the body",
-            "PACK": "A group of items wrapped together"
-        }
-    ],
-    "WATERFALL": [
-        {
-            "WATERFALL": "Water that drops over a steep edge"
-        },
-        {
-            "WATER": "A clear liquid needed by living things",
-            "FALL": "To drop downward",
-            "ALL": "Everything or everyone"
-        }
-    ],
-    "MOONLIGHT": [
-        {
-            "MOONLIGHT": "Light that comes from the moon"
-        },
-        {
-            "MOON": "A natural object that orbits a planet",
-            "LIGHT": "Something that makes things visible"
-        }
-    ],
-    "STARFISH": [
-        {
-            "STARFISH": "A sea animal with arms that spread from its center"
-        },
-        {
-            "STAR": "A bright object in the night sky",
-            "FISH": "An animal that lives in water"
-        }
-    ],
-    "KEYBOARD": [
-        {
-            "KEYBOARD": "A set of keys used to type or play music"
-        },
-        {
-            "KEY": "A tool used to open a lock",
-            "BOARD": "A flat, solid piece of material"
-        }
-    ],
-    "RAINBOW": [
-        {
-            "RAINBOW": "A colorful arc that appears in the sky"
-        },
-        {
-            "RAIN": "Water that falls from clouds",
-            "BOW": "A curved shape or a knot with loops"
-        }
-    ],
-    "NOTEWORTHY": [
-        {
-            "NOTEWORTHY": "Important or deserving attention"
-        },
-        {
-            "NOTE": "A short written message",
-            "WORTH": "The value of something"
-        }
-    ],
-    "PLAYGROUND": [
-        {
-            "PLAYGROUND": "An outdoor area where children play"
-        },
-        {
-            "PLAY": "To take part in a game or activity",
-            "GROUND": "The surface of the Earth",
-            "ROUND": "Shaped like a circle or sphere"
-        }
-    ],
-    "CAMPFIRE": [
-        {
-            "CAMPFIRE": "An outdoor fire used for warmth or cooking"
-        },
-        {
-            "CAMP": "A place to stay outdoors in tents",
-            "FIRE": "Heat and light produced by burning"
-        }
-    ],
-    "DAYDREAM": [
-        {
-            "DAYDREAM": "A pleasant thought imagined while awake"
-        },
-        {
-            "DAY": "The time when the sun is up",
-            "DREAM": "A series of thoughts or images during sleep"
-        }
-    ],
-    "FOOTPRINT": [
-        {
-            "FOOTPRINT": "A mark left by a foot on a surface"
-        },
-        {
-            "FOOT": "The part of the body at the end of the leg",
-            "PRINT": "Words or images produced on paper"
-        }
-    ],
-    "HONEYMOON": [
-        {
-            "HONEYMOON": "A trip taken by a couple after their wedding"
-        },
-        {
-            "HONEY": "A sweet substance made by bees",
-            "MOON": "A natural object that orbits a planet",
-            "ONE": "The number after zero"
-        }
-    ],
-    "WILDLIFE": [
-        {
-            "WILDLIFE": "Animals and plants living in nature"
-        },
-        {
-            "WILD": "Living freely in nature",
-            "LIFE": "The state of being alive"
-        }
-    ],
-    "HANDSHAKE": [
-        {
-            "HANDSHAKE": "A greeting made by holding and moving hands"
-        },
-        {
-            "HAND": "The part of the body at the end of the arm",
-            "SHAKE": "To move quickly back and forth",
-            "AND": "A word that joins things together"
-        }
-    ],
-    "FIREPLACE": [
-        {
-            "FIREPLACE": "A place in a room where a fire can burn"
-        },
-        {
-            "FIRE": "Heat and light produced by burning",
-            "PLACE": "A particular location",
-            "ACE": "A playing card with one symbol"
-        }
-    ],
-    "SUNSHINE": [
-        {
-            "SUNSHINE": "The light and warmth of the sun"
-        },
-        {
-            "SUN": "The star that gives Earth light",
-            "SHINE": "To give off or reflect light",
-        }
-    ],
-    "CUPCAKE": [
-        {
-            "CUPCAKE": "A small cake baked in a paper cup"
-        },
-        {
-            "CUP": "A small container used for drinking",
-            "CAKE": "A sweet baked dessert",
-            "UP": "Toward a higher place"
-        }
-    ],
-    "AIRPLANE": [
-        {
-            "AIRPLANE": "A vehicle that flies through the sky"
-        },
-        {
-            "AIR": "The invisible gas that surrounds Earth",
-            "PLANE": "A vehicle that flies or a flat surface",
-            "PLAN": "An idea for how to do something"
-        }
-    ],
-    "BOOKSTORE": [
-        {
-            "BOOKSTORE": "A shop that sells books"
-        },
-        {
-            "BOOK": "A set of pages bound together",
-            "STORE": "A place where goods are sold",
-            "ORE": "Rock that contains useful minerals"
-        }
-    ],
-    "LANTERN": [
-        {
-            "LANTERN": "A portable light with a protective cover"
-        },
-        {
-            "ANT": "A small crawling insect",
-            "TERN": "A seabird with long wings"
-        }
-    ],
-    "HOSPITAL": [
-        {
-            "HOSPITAL": "A place where sick or injured people receive care"
-        },
-        {
-            "HOST": "A person who welcomes guests",
-            "PIT": "A hole in the ground",
-            "SPIT": "To force saliva out of the mouth"
-        }
-    ],
-    "LANDSCAPE": [
-        {
-            "LANDSCAPE": "The visible features of an area of land"
-        },
-        {
-            "LAND": "The solid surface of Earth",
-            "AND": "A word that joins things together",
-            "APE": "A large primate without a tail"
-        }
-    ],
-    "WINDMILL": [
-        {
-            "WINDMILL": "A structure that uses wind to turn blades"
-        },
-        {
-            "WIND": "Moving air",
-            "MILL": "A building where materials are processed",
-            "ILL": "Sick or unwell"
-        }
-    ],
-    "SEASHELL": [
-        {
-            "SEASHELL": "The hard outer covering of a sea animal"
-        },
-        {
-            "SEA": "A large body of salt water",
-            "SHELL": "A hard outer covering",
-            "ASH": "The powder left after something burns"
-        }
-    ],
-    "DOORBELL": [
-        {
-            "DOORBELL": "A device that rings when someone visits"
-        },
-        {
-            "DOOR": "A movable entrance to a room or building",
-            "BELL": "An object that makes a ringing sound",
-            "ORB": "A round object or sphere"
-        }
-    ],
-    "TOOTHBRUSH": [
-        {
-            "TOOTHBRUSH": "A tool used to clean teeth"
-        },
-        {
-            "TOOTH": "A hard structure in the mouth used for chewing",
-            "BRUSH": "A tool with bristles used for cleaning",
-            "RUSH": "To move or act quickly"
-        }
-    ],
-    "MAILBOX": [
-        {
-            "MAILBOX": "A container where letters are delivered"
-        },
-        {
-            "MAIL": "Letters and packages sent to people",
-            "BOX": "A container with flat sides",
-            "AIL": "To suffer from an illness"
-        }
-    ]
+  "CARPENTER": [
+    {
+      "CARPENTER": "A person who builds with wood"
+    },
+    {
+      "CARP": "To complain continuously",
+      "PEN": "A tool used for writing with ink"
+    }
+  ],
+  "CANDIDATE": [
+    {
+      "CANDIDATE": "Someone applying for a job or office"
+    },
+    {
+      "CAN": "A metal container",
+      "DID": "Performed an action",
+      "ATE": "Consumed food"
+    }
+  ],
+  "PLATFORM": [
+    {
+      "PLATFORM": "A raised surface to stand on"
+    },
+    {
+      "PLAT": "A plot of land or map",
+      "FORM": "The shape or structure of something"
+    }
+  ],
+  "PINEAPPLE": [
+    {
+      "PINEAPPLE": "A tropical fruit with spiky skin"
+    },
+    {
+      "PINE": "An evergreen tree with needles",
+      "APPLE": "A common crisp, round fruit"
+    }
+  ],
+  "MUSHROOM": [
+    {
+      "MUSHROOM": "A fungus with an umbrella-shaped cap"
+    },
+    {
+      "MUSH": "Soft, wet pulp",
+      "ROOM": "An enclosed space in a building"
+    }
+  ],
+  "FANTASY": [
+    {
+      "FANTASY": "An imaginative or magical idea"
+    },
+    {
+      "FAN": "An admirer, or a device that blows air",
+      "ANT": "A small crawling insect"
+    }
+  ],
+  "ABSOLUTE": [
+    {
+      "ABSOLUTE": "Complete and total"
+    },
+    {
+      "SOL": "The sun or a musical note",
+      "LUTE": "An old stringed instrument"
+    }
+  ],
+  "ALPHABET": [
+    {
+      "ALPHABET": "A set of letters used to write a language"
+    },
+    {
+      "ALPHA": "The first letter of the Greek alphabet",
+      "BET": "A wager on an outcome"
+    }
+  ],
+  "PASSENGER": [
+    {
+      "PASSENGER": "A traveler riding in a vehicle"
+    },
+    {
+      "PASS": "To go past or move forward"
+    }
+  ],
+  "DISCOVERY": [
+    {
+      "DISCOVERY": "Finding something new or hidden"
+    },
+    {
+      "DISCO": "A genre of dance music",
+      "VERY": "To a high degree"
+    }
+  ],
+  "PORTRAIT": [
+    {
+      "PORTRAIT": "A picture or painting of a person"
+    },
+    {
+      "PORT": "A harbor for ships",
+      "TRAIT": "A distinguishing characteristic"
+    }
+  ],
+  "SENTIMENT": [
+    {
+      "SENTIMENT": "An opinion, view, or feeling"
+    },
+    {
+      "SENT": "Dispatched to a destination",
+      "MEN": "Adult human males"
+    }
+  ],
+  "INTERNET": [
+    {
+      "INTERNET": "A global computer network"
+    },
+    {
+      "INTER": "Between or among",
+      "NET": "A mesh fabric used for catching things"
+    }
+  ],
+  "ORCHESTRA": [
+    {
+      "ORCHESTRA": "A large group of musicians playing together"
+    },
+    {
+      "CHEST": "The front part of the torso",
+      "STAR": "A luminous point in the night sky"
+    }
+  ],
+  "HERITAGE": [
+    {
+      "HERITAGE": "Valued traditions passed down over generations"
+    },
+    {
+      "HER": "Female pronoun",
+      "AGE": "The length of time lived",
+      "TAG": "A small label attached to an item"
+    }
+  ],
+  "SPECTRUM": [
+    {
+      "SPECTRUM": "A band of colors or a broad range"
+    },
+    {
+      "SPEC": "Short for specification or spectacle",
+      "RUM": "A distilled liquor made from sugarcane"
+    }
+  ],
+  "PANTHEON": [
+    {
+      "PANTHEON": "A group of particularly respected individuals"
+    },
+    {
+      "PAN": "A flat container used for cooking",
+      "THE": "Denoting a specific person or thing"
+    }
+  ],
+  "SIGNATURE": [
+    {
+      "SIGNATURE": "A person's name written in their own handwriting"
+    },
+    {
+      "SIGN": "A notice bearing information or a direction",
+      "NATURE": "The physical world and living things"
+    }
+  ],
+  "AVALANCHE": [
+    {
+      "AVALANCHE": "A mass of snow sliding down a mountain"
+    },
+    {
+      "LAN": "Local Area Network"
+    }
+  ],
+  "PORTABLE": [
+    {
+      "PORTABLE": "Easily carried or moved"
+    },
+    {
+      "PORT": "A harbor for ships",
+      "ABLE": "Having the power, skill, or means"
+    }
+  ],
+  "SCAVENGER": [
+    {
+      "SCAVENGER": "An animal or person that searches for usable items"
+    },
+    {
+      "CAVE": "A naturally occuring underground hollow",
+      "AVENGE": "to punish a person for a wrong done to you"
+    }
+  ],
+  "NOTEBOOK": [
+    {
+      "NOTEBOOK": "A book used for writing notes"
+    },
+    {
+      "NOTE": "A short written message",
+      "BOOK": "A set of pages bound together"
+    }
+  ],
+  "SUNFLOWER": [
+    {
+      "SUNFLOWER": "A tall plant with a large yellow flower"
+    },
+    {
+      "SUN": "The star that gives Earth light",
+      "FLOW": "To move smoothly like water",
+      "LOW": "Not high"
+    }
+  ],
+  "BUTTERFLY": [
+    {
+      "BUTTERFLY": "An insect with colorful wings"
+    },
+    {
+      "BUTTER": "A yellow spread made from cream",
+      "FLY": "An insect with wings"
+    }
+  ],
+  "BACKPACK": [
+    {
+      "BACKPACK": "A bag carried on the back"
+    },
+    {
+      "BACK": "The rear part of the body",
+      "PACK": "A group of items wrapped together"
+    }
+  ],
+  "WATERFALL": [
+    {
+      "WATERFALL": "Water that drops over a steep edge"
+    },
+    {
+      "WATER": "A clear liquid needed by living things",
+      "FALL": "To drop downward",
+      "ALL": "Everything or everyone"
+    }
+  ],
+  "MOONLIGHT": [
+    {
+      "MOONLIGHT": "Light that comes from the moon"
+    },
+    {
+      "MOON": "A natural object that orbits a planet",
+      "LIGHT": "Something that makes things visible"
+    }
+  ],
+  "STARFISH": [
+    {
+      "STARFISH": "A sea animal with arms that spread from its center"
+    },
+    {
+      "STAR": "A bright object in the night sky",
+      "FISH": "An animal that lives in water"
+    }
+  ],
+  "KEYBOARD": [
+    {
+      "KEYBOARD": "A set of keys used to type or play music"
+    },
+    {
+      "KEY": "A tool used to open a lock",
+      "BOARD": "A flat, solid piece of material"
+    }
+  ],
+  "RAINBOW": [
+    {
+      "RAINBOW": "A colorful arc that appears in the sky"
+    },
+    {
+      "RAIN": "Water that falls from clouds",
+      "BOW": "A curved shape or a knot with loops"
+    }
+  ],
+  "NOTEWORTHY": [
+    {
+      "NOTEWORTHY": "Important or deserving attention"
+    },
+    {
+      "NOTE": "A short written message",
+      "WORTH": "The value of something"
+    }
+  ],
+  "PLAYGROUND": [
+    {
+      "PLAYGROUND": "An outdoor area where children play"
+    },
+    {
+      "PLAY": "To take part in a game or activity",
+      "GROUND": "The surface of the Earth",
+      "ROUND": "Shaped like a circle or sphere"
+    }
+  ],
+  "CAMPFIRE": [
+    {
+      "CAMPFIRE": "An outdoor fire used for warmth or cooking"
+    },
+    {
+      "CAMP": "A place to stay outdoors in tents",
+      "FIRE": "Heat and light produced by burning"
+    }
+  ],
+  "DAYDREAM": [
+    {
+      "DAYDREAM": "A pleasant thought imagined while awake"
+    },
+    {
+      "DAY": "The time when the sun is up",
+      "DREAM": "A series of thoughts or images during sleep"
+    }
+  ],
+  "FOOTPRINT": [
+    {
+      "FOOTPRINT": "A mark left by a foot on a surface"
+    },
+    {
+      "FOOT": "The part of the body at the end of the leg",
+      "PRINT": "Words or images produced on paper"
+    }
+  ],
+  "HONEYMOON": [
+    {
+      "HONEYMOON": "A trip taken by a couple after their wedding"
+    },
+    {
+      "HONEY": "A sweet substance made by bees",
+      "MOON": "A natural object that orbits a planet",
+      "ONE": "The number after zero"
+    }
+  ],
+  "WILDLIFE": [
+    {
+      "WILDLIFE": "Animals and plants living in nature"
+    },
+    {
+      "WILD": "Living freely in nature",
+      "LIFE": "The state of being alive"
+    }
+  ],
+  "HANDSHAKE": [
+    {
+      "HANDSHAKE": "A greeting made by holding and moving hands"
+    },
+    {
+      "HAND": "The part of the body at the end of the arm",
+      "SHAKE": "To move quickly back and forth",
+      "AND": "A word that joins things together"
+    }
+  ],
+  "FIREPLACE": [
+    {
+      "FIREPLACE": "A place in a room where a fire can burn"
+    },
+    {
+      "FIRE": "Heat and light produced by burning",
+      "PLACE": "A particular location",
+      "ACE": "A playing card with one symbol"
+    }
+  ],
+  "SUNSHINE": [
+    {
+      "SUNSHINE": "The light and warmth of the sun"
+    },
+    {
+      "SUN": "The star that gives Earth light",
+      "SHINE": "To give off or reflect light"
+    }
+  ],
+  "CUPCAKE": [
+    {
+      "CUPCAKE": "A small cake baked in a paper cup"
+    },
+    {
+      "CUP": "A small container used for drinking",
+      "CAKE": "A sweet baked dessert",
+      "UP": "Toward a higher place"
+    }
+  ],
+  "AIRPLANE": [
+    {
+      "AIRPLANE": "A vehicle that flies through the sky"
+    },
+    {
+      "AIR": "The invisible gas that surrounds Earth",
+      "PLANE": "A vehicle that flies or a flat surface",
+      "PLAN": "An idea for how to do something"
+    }
+  ],
+  "BOOKSTORE": [
+    {
+      "BOOKSTORE": "A shop that sells books"
+    },
+    {
+      "BOOK": "A set of pages bound together",
+      "STORE": "A place where goods are sold",
+      "ORE": "Rock that contains useful minerals"
+    }
+  ],
+  "LANTERN": [
+    {
+      "LANTERN": "A portable light with a protective cover"
+    },
+    {
+      "ANT": "A small crawling insect",
+      "TERN": "A seabird with long wings"
+    }
+  ],
+  "HOSPITAL": [
+    {
+      "HOSPITAL": "A place where sick or injured people receive care"
+    },
+    {
+      "HOST": "A person who welcomes guests",
+      "PIT": "A hole in the ground",
+      "SPIT": "To force saliva out of the mouth"
+    }
+  ],
+  "LANDSCAPE": [
+    {
+      "LANDSCAPE": "The visible features of an area of land"
+    },
+    {
+      "LAND": "The solid surface of Earth",
+      "AND": "A word that joins things together",
+      "APE": "A large primate without a tail"
+    }
+  ],
+  "WINDMILL": [
+    {
+      "WINDMILL": "A structure that uses wind to turn blades"
+    },
+    {
+      "WIND": "Moving air",
+      "MILL": "A building where materials are processed",
+      "ILL": "Sick or unwell"
+    }
+  ],
+  "SEASHELL": [
+    {
+      "SEASHELL": "The hard outer covering of a sea animal"
+    },
+    {
+      "SEA": "A large body of salt water",
+      "SHELL": "A hard outer covering",
+      "ASH": "The powder left after something burns"
+    }
+  ],
+  "DOORBELL": [
+    {
+      "DOORBELL": "A device that rings when someone visits"
+    },
+    {
+      "DOOR": "A movable entrance to a room or building",
+      "BELL": "An object that makes a ringing sound",
+      "ORB": "A round object or sphere"
+    }
+  ],
+  "TOOTHBRUSH": [
+    {
+      "TOOTHBRUSH": "A tool used to clean teeth"
+    },
+    {
+      "TOOTH": "A hard structure in the mouth used for chewing",
+      "BRUSH": "A tool with bristles used for cleaning",
+      "RUSH": "To move or act quickly"
+    }
+  ],
+  "MAILBOX": [
+    {
+      "MAILBOX": "A container where letters are delivered"
+    },
+    {
+      "MAIL": "Letters and packages sent to people",
+      "BOX": "A container with flat sides",
+      "AIL": "To suffer from an illness"
+    }
+  ]
 }
