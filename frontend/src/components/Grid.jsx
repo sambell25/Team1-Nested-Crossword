@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import mockGridData from '../data/mockGrid.json'
+import Timer from './Timer'
 import './Grid.css'
 
 function createGridData() {
@@ -47,6 +48,7 @@ export default function Grid() {
 
   return (
     <div className="crossword-container">
+      <Timer />
       <div
         className="grid-board"
         style={{

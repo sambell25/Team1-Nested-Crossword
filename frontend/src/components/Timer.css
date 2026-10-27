@@ -1,0 +1,35 @@
+.timer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 10px;
+}
+
+.timer-display {
+  font-family: var(--mono, monospace);
+  font-variant-numeric: tabular-nums;
+  font-size: 1.25rem;
+  color: var(--text-h, #08060d);
+}
+
+.timer-toggle {
+  font: inherit;
+  font-size: 0.875rem;
+  padding: 4px 12px;
+  border-radius: 5px;
+  border: 2px solid transparent;
+  color: var(--accent, #aa3bff);
+  background: var(--accent-bg, rgba(170, 59, 255, 0.1));
+  cursor: pointer;
+  transition: border-color 0.3s;
+}
+
+.timer-toggle:hover {
+  border-color: var(--accent-border, rgba(170, 59, 255, 0.5));
+}
+
+.timer-toggle:focus-visible {
+  outline: 2px solid var(--accent, #aa3bff);
+  outline-offset: 2px;
+}
