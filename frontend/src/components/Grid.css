@@ -41,6 +41,27 @@
   text-transform: uppercase;
 }
 
+.white-cell.nested-hint {
+  background-color: #fff3b0;
+}
+
+.white-cell.nested-done {
+  background-color: #b6e3b6;
+}
+
+.white-cell.word-complete {
+  background-color: #8ec5ff;
+}
+
+.white-cell.word-complete input {
+  cursor: default;
+}
+
+.crossed-off {
+  text-decoration: line-through;
+  opacity: 0.6;
+}
+
 .white-cell:focus-within {
   background-color: #eef7ff;
   box-shadow: inset 0 0 0 2px #007bff;

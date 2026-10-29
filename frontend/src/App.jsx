@@ -1,8 +1,11 @@
 import Grid from './components/Grid'
 import HintPanel from './components/HintPanel'
+import usePuzzleState from './hooks/usePuzzleState'
 import './App.css'
 
 function App() {
+  const puzzleState = usePuzzleState()
+
   return (
     <div className="App">
       <header style={{ textAlign: 'center', margin: '20px 0' }}>
@@ -10,10 +13,10 @@ function App() {
       </header>
       <main className="layout">
         <section className="layout-grid">
-          <Grid />
+          <Grid puzzleState={puzzleState} />
         </section>
         <aside className="layout-hints">
-          <HintPanel />
+          <HintPanel puzzleState={puzzleState} />
         </aside>
       </main>
     </div>
