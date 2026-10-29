@@ -1,49 +1,23 @@
-import { useState } from 'react'
-import mockGridData from '../data/mockGrid.json'
 import Timer from './Timer'
 import './Grid.css'
 
-function createGridData() {
-  const rows = mockGridData.rows || 15
-  const cols = mockGridData.cols || 15
+export default function Grid({ puzzleState }) {
+  const { grid, values, setCell, hintedCells, nestedDoneCells, lockedCells } =
+    puzzleState
 
-  const cells = []
-  for (let r = 0; r < rows; r++) {
-    for (let c = 0; c < cols; c++) {
-      cells.push({
-        row: r,
-        col: c,
-        isBlack: false,
-        value: '',
-        number: null,
-      })
-    }
+  const handleInputChange = (cell, event) => {
+    const letter = event.target.value
+      .slice(-1)
+      .toUpperCase()
+      .replace(/[^A-Z]/g, '')
+    setCell(cell.row, cell.col, letter)
   }
 
-  if (mockGridData.cells) {
-    mockGridData.cells.forEach((mockCell) => {
-      const index = mockCell.row * cols + mockCell.col
-      if (index >= 0 && index < cells.length) {
-        cells[index] = { ...cells[index], ...mockCell }
-      }
-    })
-  }
-
-  return { rows, cols, cells }
-}
-
-export default function Grid() {
-  const [gridData, setGridData] = useState(createGridData)
-
-  const handleInputChange = (index, event) => {
-    const newValue = event.target.value.slice(-1).toUpperCase()
-    const updatedCells = [...gridData.cells]
-    updatedCells[index].value = newValue
-
-    setGridData({
-      ...gridData,
-      cells: updatedCells,
-    })
+  const stateClass = (key) => {
+    if (lockedCells.has(key)) return 'word-complete'
+    if (nestedDoneCells.has(key)) return 'nested-done'
+    if (hintedCells.has(key)) return 'nested-hint'
+    return ''
   }
 
   return (
@@ -52,26 +26,32 @@ export default function Grid() {
       <div
         className="grid-board"
         style={{
-          gridTemplateColumns: `repeat(${gridData.cols}, 35px)`,
-          gridTemplateRows: `repeat(${gridData.rows}, 35px)`,
+          gridTemplateColumns: `repeat(${grid.cols}, 35px)`,
+          gridTemplateRows: `repeat(${grid.rows}, 35px)`,
         }}
       >
-        {gridData.cells.map((cell, index) => (
-          <div
-            key={index}
-            className={`cell ${cell.isBlack ? 'black-cell' : 'white-cell'}`}
-          >
-            {cell.number && <span className="cell-number">{cell.number}</span>}
-            {!cell.isBlack && (
-              <input
-                type="text"
-                maxLength="1"
-                value={cell.value}
-                onChange={(e) => handleInputChange(index, e)}
-              />
-            )}
-          </div>
-        ))}
+        {grid.cells.map((cell) => {
+          const key = `${cell.row},${cell.col}`
+          return (
+            <div
+              key={key}
+              className={`cell ${cell.isBlack ? 'black-cell' : `white-cell ${stateClass(key)}`}`}
+            >
+              {cell.number && (
+                <span className="cell-number">{cell.number}</span>
+              )}
+              {!cell.isBlack && (
+                <input
+                  type="text"
+                  maxLength="1"
+                  value={values[key] ?? ''}
+                  readOnly={lockedCells.has(key)}
+                  onChange={(e) => handleInputChange(cell, e)}
+                />
+              )}
+            </div>
+          )
+        })}
       </div>
     </div>
   )

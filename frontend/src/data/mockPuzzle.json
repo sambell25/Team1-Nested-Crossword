@@ -1,136 +1,227 @@
 {
   "id": "puzzle-1",
-  "title": "Starter Crossword",
-  "width": 9,
-  "height": 9,
+  "title": "WordNest Crossword",
+  "width": 13,
+  "height": 13,
   "answers": [
     {
-      "answerid": "1A",
-      "wordid": 101,
+      "answer_id": "1A",
+      "clue_number": 1,
       "row": 0,
-      "col": 0,
+      "col": 1,
       "direction": "across",
-      "length": 5,
-      "cluenumber": 1,
-      "answer": "APPLE",
-      "clue": "A fruit that can be red or green",
-      "hints": [
-        "It is often eaten as a snack.",
-        "It starts with A and has five letters."
+      "length": 8,
+      "answer": "PLATFORM",
+      "clue": "A raised surface to stand on",
+      "nested_words": [
+        {
+          "word": "PLAT",
+          "start": 0,
+          "hint": "A plot of land or map"
+        },
+        {
+          "word": "FORM",
+          "start": 4,
+          "hint": "The shape or structure of something"
+        }
       ]
     },
     {
-      "answerid": "2A",
-      "wordid": 102,
-      "row": 2,
-      "col": 2,
-      "direction": "across",
-      "length": 5,
-      "cluenumber": 2,
-      "answer": "TIGER",
-      "clue": "A large striped wild cat",
-      "hints": ["It is a large feline.", "Its name starts with T."]
-    },
-    {
-      "answerid": "3A",
-      "wordid": 103,
-      "row": 4,
+      "answer_id": "2A",
+      "clue_number": 2,
+      "row": 3,
       "col": 0,
       "direction": "across",
-      "length": 4,
-      "cluenumber": 3,
-      "answer": "STAR",
-      "clue": "A bright object visible in the night sky",
-      "hints": ["The Sun is one.", "It starts with S."]
+      "length": 8,
+      "answer": "STARFISH",
+      "clue": "A sea animal with arms that spread from its center",
+      "nested_words": [
+        {
+          "word": "STAR",
+          "start": 0,
+          "hint": "A bright object in the night sky"
+        },
+        {
+          "word": "FISH",
+          "start": 4,
+          "hint": "An animal that lives in water"
+        }
+      ]
     },
     {
-      "answerid": "4A",
-      "wordid": 104,
+      "answer_id": "5A",
+      "clue_number": 5,
       "row": 6,
-      "col": 2,
-      "direction": "across",
-      "length": 4,
-      "cluenumber": 4,
-      "answer": "MOON",
-      "clue": "An object that orbits Earth",
-      "hints": ["It can appear full or crescent-shaped.", "It starts with M."]
-    },
-    {
-      "answerid": "5A",
-      "wordid": 105,
-      "row": 8,
       "col": 0,
       "direction": "across",
-      "length": 4,
-      "cluenumber": 5,
-      "answer": "FISH",
-      "clue": "An animal that lives in water",
-      "hints": ["It usually has fins and gills.", "It starts with F."]
-    },
-    {
-      "answerid": "1D",
-      "wordid": 106,
-      "row": 0,
-      "col": 0,
-      "direction": "down",
-      "length": 4,
-      "cluenumber": 1,
-      "answer": "AREA",
-      "clue": "A region or measured surface",
-      "hints": ["It can be measured in square units.", "It starts with A."]
-    },
-    {
-      "answerid": "2D",
-      "wordid": 107,
-      "row": 0,
-      "col": 2,
-      "direction": "down",
-      "length": 5,
-      "cluenumber": 2,
-      "answer": "PLANT",
-      "clue": "A living thing that often grows in soil",
-      "hints": ["It may have leaves and roots.", "It starts with P."]
-    },
-    {
-      "answerid": "3D",
-      "wordid": 108,
-      "row": 0,
-      "col": 4,
-      "direction": "down",
-      "length": 5,
-      "cluenumber": 3,
-      "answer": "EAGER",
-      "clue": "Very excited or enthusiastic",
-      "hints": [
-        "It describes someone who is keen to do something.",
-        "It starts with E."
+      "length": 8,
+      "answer": "HOSPITAL",
+      "clue": "A place where sick or injured people receive care",
+      "nested_words": [
+        {
+          "word": "PIT",
+          "start": 3,
+          "hint": "A hole in the ground"
+        },
+        {
+          "word": "SPIT",
+          "start": 2,
+          "hint": "To force saliva out of the mouth"
+        }
       ]
     },
     {
-      "answerid": "4D",
-      "wordid": 109,
-      "row": 2,
-      "col": 3,
-      "direction": "down",
-      "length": 5,
-      "cluenumber": 4,
-      "answer": "GRAPE",
-      "clue": "A small fruit often used to make raisins",
-      "hints": ["It can be green or purple.", "It starts with G."]
+      "answer_id": "7A",
+      "clue_number": 7,
+      "row": 8,
+      "col": 5,
+      "direction": "across",
+      "length": 8,
+      "answer": "WINDMILL",
+      "clue": "A structure that uses wind to turn blades",
+      "nested_words": [
+        {
+          "word": "WIND",
+          "start": 0,
+          "hint": "Moving air"
+        },
+        {
+          "word": "MILL",
+          "start": 4,
+          "hint": "A building where materials are processed"
+        },
+        {
+          "word": "ILL",
+          "start": 5,
+          "hint": "Sick or unwell"
+        }
+      ]
     },
     {
-      "answerid": "5D",
-      "wordid": 110,
-      "row": 4,
+      "answer_id": "8A",
+      "clue_number": 8,
+      "row": 10,
       "col": 0,
+      "direction": "across",
+      "length": 8,
+      "answer": "WILDLIFE",
+      "clue": "Animals and plants living in nature",
+      "nested_words": [
+        {
+          "word": "WILD",
+          "start": 0,
+          "hint": "Living freely in nature"
+        },
+        {
+          "word": "LIFE",
+          "start": 4,
+          "hint": "The state of being alive"
+        }
+      ]
+    },
+    {
+      "answer_id": "9A",
+      "clue_number": 9,
+      "row": 12,
+      "col": 2,
+      "direction": "across",
+      "length": 9,
+      "answer": "AVALANCHE",
+      "clue": "A mass of snow sliding down a mountain",
+      "nested_words": [
+        {
+          "word": "LAN",
+          "start": 3,
+          "hint": "Local Area Network"
+        }
+      ]
+    },
+    {
+      "answer_id": "1D",
+      "clue_number": 1,
+      "row": 0,
+      "col": 1,
       "direction": "down",
-      "length": 5,
-      "cluenumber": 5,
-      "answer": "SMILE",
-      "clue": "A happy expression made with your mouth",
-      "hints": [
-        "People often make one when they are happy.",
-        "It starts with S."
+      "length": 8,
+      "answer": "PANTHEON",
+      "clue": "A group of particularly respected individuals",
+      "nested_words": [
+        {
+          "word": "PAN",
+          "start": 0,
+          "hint": "A flat container used for cooking"
+        },
+        {
+          "word": "THE",
+          "start": 3,
+          "hint": "Denoting a specific person or thing"
+        }
+      ]
+    },
+    {
+      "answer_id": "3D",
+      "clue_number": 3,
+      "row": 3,
+      "col": 10,
+      "direction": "down",
+      "length": 8,
+      "answer": "CAMPFIRE",
+      "clue": "An outdoor fire used for warmth or cooking",
+      "nested_words": [
+        {
+          "word": "CAMP",
+          "start": 0,
+          "hint": "A place to stay outdoors in tents"
+        },
+        {
+          "word": "FIRE",
+          "start": 4,
+          "hint": "Heat and light produced by burning"
+        }
+      ]
+    },
+    {
+      "answer_id": "4D",
+      "clue_number": 4,
+      "row": 4,
+      "col": 12,
+      "direction": "down",
+      "length": 8,
+      "answer": "ABSOLUTE",
+      "clue": "Complete and total",
+      "nested_words": [
+        {
+          "word": "SOL",
+          "start": 2,
+          "hint": "The sun or a musical note"
+        },
+        {
+          "word": "LUTE",
+          "start": 4,
+          "hint": "An old stringed instrument"
+        }
+      ]
+    },
+    {
+      "answer_id": "6D",
+      "clue_number": 6,
+      "row": 6,
+      "col": 7,
+      "direction": "down",
+      "length": 7,
+      "answer": "LANTERN",
+      "clue": "A portable light with a protective cover",
+      "nested_words": [
+        {
+          "word": "ANT",
+          "start": 1,
+          "hint": "A small crawling insect"
+        },
+        {
+          "word": "TERN",
+          "start": 3,
+          "hint": "A seabird with long wings"
+        }
       ]
     }
   ]

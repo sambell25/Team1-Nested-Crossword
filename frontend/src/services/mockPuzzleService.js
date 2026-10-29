@@ -110,6 +110,12 @@ export function validatePuzzle(puzzle = mockPuzzle) {
       errors.push(`Incorrect length for ${entry.answer_id}.`)
     }
 
+    for (const nested of entry.nested_words ?? []) {
+      if (answer.slice(nested.start, nested.start + nested.word.length) !== nested.word) {
+        errors.push(`Nested word ${nested.word} not found in ${entry.answer_id}.`)
+      }
+    }
+
     if (
       (entry.direction === 'across' &&
         entry.col + answer.length > puzzle.width) ||
@@ -158,4 +164,45 @@ export function getNestedWords(answerId) {
   const answer = getAnswerById(answerId)
 
   return Array.isArray(answer?.nested_words) ? answer.nested_words : []
+}
+
+// Cells covered by a nested word, in reading order.
+export function getNestedWordCells(entry, nested) {
+  return getAnswerCells(entry).slice(
+    nested.start,
+    nested.start + nested.word.length,
+  )
+}
+
+// Builds the full grid. Any square not covered by an answer is black.
+export function buildGrid(puzzle = mockPuzzle) {
+  const { width, height } = puzzle
+  const cells = []
+
+  for (let row = 0; row < height; row++) {
+    for (let col = 0; col < width; col++) {
+      cells.push({
+        row,
+        col,
+        isBlack: true,
+        solution: '',
+        number: null,
+        answer_ids: [],
+      })
+    }
+  }
+
+  for (const entry of puzzle.answers) {
+    getAnswerCells(entry).forEach((cell, index) => {
+      const target = cells[cell.row * width + cell.col]
+      target.isBlack = false
+      target.solution = cell.letter
+      target.answer_ids.push(entry.answer_id)
+      if (index === 0) {
+        target.number = entry.clue_number
+      }
+    })
+  }
+
+  return { rows: height, cols: width, cells }
 }
