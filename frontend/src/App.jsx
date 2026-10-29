@@ -16,7 +16,7 @@ function App() {
           <Grid puzzleState={puzzleState} />
         </section>
         <aside className="layout-hints">
-                    <HintPanel puzzleState={puzzleState} />
+          <HintPanel puzzleState={puzzleState} />
         </aside>
       </main>
     </div>

@@ -111,8 +111,13 @@ export function validatePuzzle(puzzle = mockPuzzle) {
     }
 
     for (const nested of entry.nested_words ?? []) {
-      if (answer.slice(nested.start, nested.start + nested.word.length) !== nested.word) {
-        errors.push(`Nested word ${nested.word} not found in ${entry.answer_id}.`)
+      if (
+        answer.slice(nested.start, nested.start + nested.word.length) !==
+        nested.word
+      ) {
+        errors.push(
+          `Nested word ${nested.word} not found in ${entry.answer_id}.`,
+        )
       }
     }
 

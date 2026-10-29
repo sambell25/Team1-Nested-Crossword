@@ -50,7 +50,13 @@ export default function usePuzzleState() {
       })
     }
 
-    return { completeAnswers, hintedCells, nestedDoneCells, lockedCells, nestedDone }
+    return {
+      completeAnswers,
+      hintedCells,
+      nestedDoneCells,
+      lockedCells,
+      nestedDone,
+    }
   }, [puzzle, matches, hintCounts])
 
   const setCell = (row, col, letter) => {

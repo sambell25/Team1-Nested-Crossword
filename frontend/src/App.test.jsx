@@ -60,9 +60,7 @@ it('highlights a nested word, crosses off its hint, and locks a completed word',
   expect(container.querySelectorAll('li.crossed-off')).toHaveLength(1)
 
   typeCells(getAnswerCells(entry))
-  expect(container.querySelectorAll('.word-complete').length).toBe(
-    entry.length,
-  )
+  expect(container.querySelectorAll('.word-complete').length).toBe(entry.length)
   const locked = container.querySelector('.word-complete input')
   expect(locked.readOnly).toBe(true)
 })
