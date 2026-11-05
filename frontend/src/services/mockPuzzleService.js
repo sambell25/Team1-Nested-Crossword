@@ -204,7 +204,15 @@ export function buildGrid(puzzle = mockPuzzle) {
       target.solution = cell.letter
       target.answer_ids.push(entry.answer_id)
       if (index === 0) {
-        target.number = entry.clue_number
+        const existing = target.number ? String(target.number).split(',') : []
+        const n = String(entry.clue_number)
+        if (!existing.includes(n)) {
+          existing.push(n)
+          target.number = existing
+            .map(Number)
+            .sort((a, b) => a - b)
+            .join(',')
+        }
       }
     })
   }

@@ -20,7 +20,8 @@ it('allows typing a letter into a grid square', () => {
   render(<App />)
   const input = screen.getAllByRole('textbox')[0]
 
-  fireEvent.change(input, { target: { value: 'a' } })
+  fireEvent.mouseDown(input)
+  fireEvent.keyDown(input, { key: 'a' })
 
   expect(input.value).toBe('A')
 })
@@ -45,7 +46,9 @@ it('highlights a nested word, crosses off its hint, and locks a completed word',
       const index = grid.cells
         .filter((c) => !c.isBlack)
         .findIndex((c) => c.row === row && c.col === col)
-      fireEvent.change(inputs()[index], { target: { value: letter } })
+      const input = inputs()[index]
+      fireEvent.mouseDown(input)
+      fireEvent.keyDown(input, { key: letter })
     })
 
   fireEvent.click(screen.getAllByText('Nested Word Hint')[0])
