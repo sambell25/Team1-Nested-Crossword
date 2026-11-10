@@ -1,16 +1,16 @@
 .actions-menu {
-    position: fixed;
-    display: inline-block;
-    top: 20px;
-    right: 120px;
+  position: fixed;
+  display: inline-block;
+  top: 20px;
+  right: 120px;
 }
 
 .actions-dropdown {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    background-color: white;
-    border: 1px solid #ccc;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
-    z-index: 1000;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: white;
+  border: 1px solid #ccc;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+  z-index: 1000;
 }
