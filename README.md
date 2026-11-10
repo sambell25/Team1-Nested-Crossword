@@ -7,3 +7,5 @@ Frontend Setup:
 cd frontend
 npm install
 npm run dev
+
+Hosted at: https://magnificent-syrniki-b569e0.netlify.app/

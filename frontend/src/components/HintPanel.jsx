@@ -1,35 +1,40 @@
-import { useState } from 'react'
-import { getPuzzleEntries } from '../services/mockPuzzleService'
-
-export default function HintPanel() {
-  const entries = getPuzzleEntries()
-  const [revealed, setRevealed] = useState({})
-
-  const reveal = (id) => setRevealed((r) => ({ ...r, [id]: (r[id] ?? 0) + 1 }))
+export default function HintPanel({ puzzleState }) {
+  const { puzzle, hintCounts, revealHint, completeAnswers, nestedDone } =
+    puzzleState
 
   const renderGroup = (direction) => (
     <>
       <h2>{direction === 'across' ? 'Across' : 'Down'}</h2>
-      {entries
+      {puzzle.answers
         .filter((e) => e.direction === direction)
         .map((e) => {
-          const shown = revealed[e.answerid] ?? 0
+          const nestedWords = e.nested_words ?? []
+          const shown = hintCounts[e.answer_id] ?? 0
+          const complete = completeAnswers.has(e.answer_id)
+
           return (
-            <div key={e.answerid} className="clue">
-              <p>
-                <strong>{e.cluenumber}.</strong> {e.clue}
+            <div key={e.answer_id} className="clue">
+              <p className={complete ? 'crossed-off' : undefined}>
+                <strong>{e.clue_number}.</strong> {e.clue} ({e.length})
               </p>
               <ul>
-                {e.hints.slice(0, shown).map((h, i) => (
-                  <li key={i}>{h}</li>
+                {nestedWords.slice(0, shown).map((nested, i) => (
+                  <li
+                    key={nested.word}
+                    className={
+                      nestedDone[e.answer_id]?.[i] ? 'crossed-off' : undefined
+                    }
+                  >
+                    {nested.hint} ({nested.word.length})
+                  </li>
                 ))}
               </ul>
               <button
                 type="button"
-                disabled={shown >= e.hints.length}
-                onClick={() => reveal(e.answerid)}
+                disabled={complete || shown >= nestedWords.length}
+                onClick={() => revealHint(e.answer_id)}
               >
-                {`Nested Word Hint`}
+                Nested Word Hint
               </button>
             </div>
           )

@@ -1,49 +1,49 @@
-import { useState } from 'react'
-import mockGridData from '../data/mockGrid.json'
 import Timer from './Timer'
 import './Grid.css'
 
-function createGridData() {
-  const rows = mockGridData.rows || 15
-  const cols = mockGridData.cols || 15
+export default function Grid({ puzzleState }) {
+  const {
+    grid,
+    values,
+    hintedCells,
+    nestedDoneCells,
+    lockedCells,
+    activeKey,
+    activeWordCells,
+    selectCell,
+    typeLetter,
+    backspace,
+    move,
+  } = puzzleState
 
-  const cells = []
-  for (let r = 0; r < rows; r++) {
-    for (let c = 0; c < cols; c++) {
-      cells.push({
-        row: r,
-        col: c,
-        isBlack: false,
-        value: '',
-        number: null,
-      })
+  const stateClass = (key) => {
+    if (lockedCells.has(key)) return 'word-complete'
+    if (nestedDoneCells.has(key)) return 'nested-done'
+    if (hintedCells.has(key)) return 'nested-hint'
+    return ''
+  }
+
+  const handleKeyDown = (cell, event) => {
+    const { key } = event
+    if (/^[a-zA-Z]$/.test(key)) {
+      event.preventDefault()
+      typeLetter(key.toUpperCase())
+    } else if (key === 'Backspace') {
+      event.preventDefault()
+      backspace()
+    } else if (key === 'ArrowLeft') {
+      event.preventDefault()
+      move(0, -1)
+    } else if (key === 'ArrowRight') {
+      event.preventDefault()
+      move(0, 1)
+    } else if (key === 'ArrowUp') {
+      event.preventDefault()
+      move(-1, 0)
+    } else if (key === 'ArrowDown') {
+      event.preventDefault()
+      move(1, 0)
     }
-  }
-
-  if (mockGridData.cells) {
-    mockGridData.cells.forEach((mockCell) => {
-      const index = mockCell.row * cols + mockCell.col
-      if (index >= 0 && index < cells.length) {
-        cells[index] = { ...cells[index], ...mockCell }
-      }
-    })
-  }
-
-  return { rows, cols, cells }
-}
-
-export default function Grid() {
-  const [gridData, setGridData] = useState(createGridData)
-
-  const handleInputChange = (index, event) => {
-    const newValue = event.target.value.slice(-1).toUpperCase()
-    const updatedCells = [...gridData.cells]
-    updatedCells[index].value = newValue
-
-    setGridData({
-      ...gridData,
-      cells: updatedCells,
-    })
   }
 
   return (
@@ -52,26 +52,42 @@ export default function Grid() {
       <div
         className="grid-board"
         style={{
-          gridTemplateColumns: `repeat(${gridData.cols}, 35px)`,
-          gridTemplateRows: `repeat(${gridData.rows}, 35px)`,
+          gridTemplateColumns: `repeat(${grid.cols}, 35px)`,
+          gridTemplateRows: `repeat(${grid.rows}, 35px)`,
         }}
       >
-        {gridData.cells.map((cell, index) => (
-          <div
-            key={index}
-            className={`cell ${cell.isBlack ? 'black-cell' : 'white-cell'}`}
-          >
-            {cell.number && <span className="cell-number">{cell.number}</span>}
-            {!cell.isBlack && (
-              <input
-                type="text"
-                maxLength="1"
-                value={cell.value}
-                onChange={(e) => handleInputChange(index, e)}
-              />
-            )}
-          </div>
-        ))}
+        {grid.cells.map((cell) => {
+          const key = `${cell.row},${cell.col}`
+          const inWord = activeWordCells.has(key)
+          const isActive = activeKey === key
+          return (
+            <div
+              key={key}
+              className={`cell ${
+                cell.isBlack
+                  ? 'black-cell'
+                  : `white-cell ${stateClass(key)} ${
+                      inWord ? 'active-word' : ''
+                    } ${isActive ? 'active-cell' : ''}`
+              }`}
+            >
+              {cell.number && (
+                <span className="cell-number">{cell.number}</span>
+              )}
+              {!cell.isBlack && (
+                <input
+                  type="text"
+                  maxLength="1"
+                  value={values[key] ?? ''}
+                  readOnly={lockedCells.has(key)}
+                  onMouseDown={() => selectCell(cell.row, cell.col)}
+                  onKeyDown={(e) => handleKeyDown(cell, e)}
+                  onChange={() => {}}
+                />
+              )}
+            </div>
+          )
+        })}
       </div>
     </div>
   )
