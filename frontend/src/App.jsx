@@ -1,5 +1,6 @@
 import Grid from './components/Grid'
 import HintPanel from './components/HintPanel'
+import ActionsMenu from './components/ActionsMenu'
 import usePuzzleState from './hooks/usePuzzleState'
 import './App.css'
 
@@ -17,6 +18,9 @@ function App() {
         </section>
         <aside className="layout-hints">
           <HintPanel puzzleState={puzzleState} />
+        </aside>
+        <aside className="layout-actions">
+          <ActionsMenu />
         </aside>
       </main>
     </div>
