@@ -1,6 +1,6 @@
 .layout {
   display: grid;
-  grid-template-columns: auto 1fr;
+  grid-template-columns: auto 1fr auto;
   gap: 32px;
   align-items: start;
   padding: 0 24px;
