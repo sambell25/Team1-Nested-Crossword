@@ -1,0 +1,3 @@
+/api/puzzles    https://crossword-project-backend-9q0w.onrender.com/puzzles          200
+/api/puzzles/*  https://crossword-project-backend-9q0w.onrender.com/puzzles/:splat   200
+/api/words/*    https://crossword-project-backend-9q0w.onrender.com/words/:splat     200

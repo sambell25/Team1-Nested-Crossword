@@ -1,6 +1,8 @@
 const apiUrl = (
   import.meta.env.VITE_API_URL ||
-  'https://crossword-project-backend-9q0w.onrender.com'
+  (import.meta.env.PROD
+    ? '/api'
+    : 'https://crossword-project-backend-9q0w.onrender.com')
 ).replace(/\/+$/, '')
 
 async function request(path, options, allowNotFound = false) {
