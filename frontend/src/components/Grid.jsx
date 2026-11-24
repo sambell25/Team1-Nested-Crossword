@@ -1,3 +1,4 @@
+import { useLayoutEffect, useRef } from 'react'
 import Timer from './Timer'
 import './Grid.css'
 
@@ -6,6 +7,7 @@ export default function Grid({ puzzleState }) {
     grid,
     values,
     hintedCells,
+    completeCells,
     nestedDoneCells,
     lockedCells,
     activeKey,
@@ -15,15 +17,20 @@ export default function Grid({ puzzleState }) {
     backspace,
     move,
   } = puzzleState
+  const activeInput = useRef(null)
+
+  useLayoutEffect(() => {
+    if (activeKey) activeInput.current?.focus()
+  }, [activeKey])
 
   const stateClass = (key) => {
-    if (lockedCells.has(key)) return 'word-complete'
+    if (completeCells.has(key)) return 'word-complete'
     if (nestedDoneCells.has(key)) return 'nested-done'
     if (hintedCells.has(key)) return 'nested-hint'
     return ''
   }
 
-  const handleKeyDown = (cell, event) => {
+  const handleKeyDown = (event) => {
     const { key } = event
     if (/^[a-zA-Z]$/.test(key)) {
       event.preventDefault()
@@ -76,12 +83,16 @@ export default function Grid({ puzzleState }) {
               )}
               {!cell.isBlack && (
                 <input
+                  ref={isActive ? activeInput : null}
                   type="text"
                   maxLength="1"
                   value={values[key] ?? ''}
                   readOnly={lockedCells.has(key)}
                   onMouseDown={() => selectCell(cell.row, cell.col)}
-                  onKeyDown={(e) => handleKeyDown(cell, e)}
+                  onFocus={() => {
+                    if (!isActive) selectCell(cell.row, cell.col)
+                  }}
+                  onKeyDown={handleKeyDown}
                   onChange={() => {}}
                 />
               )}
