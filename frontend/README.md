@@ -1,16 +1,31 @@
-# React + Vite
+# WordNest Crossword frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+From the `frontend` directory, install dependencies and start Vite.
 
-Currently, two official plugins are available:
+```sh
+npm ci
+npm run dev
+```
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+Local development uses the deployed Render backend by default. To point it at
+another backend, create `frontend/.env.local` and restart Vite.
 
-## React Compiler
+```dotenv
+VITE_API_URL=https://crossword-project-backend-9q0w.onrender.com
+```
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Netlify builds use same-origin `/api` requests by default. Vite copies
+`public/_redirects` into `dist`, and Netlify forwards puzzle and word requests
+to Render. Leave `VITE_API_URL` unset on Netlify, or set it to `/api`, and
+redeploy after changing it. `npm run preview` also forwards `/api` to Render.
 
-## Expanding the ESLint configuration
+For a different deployment setup, set `VITE_API_URL` at build time to the API
+base URL. If it is on a different origin, the backend must allow the frontend's
+origin for GET and POST requests.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Choose a difficulty and puzzle to start playing. Filled entries are checked
+automatically. Correct nested words turn green, and correct full entries turn
+blue. Confirmed letters are locked. The **Actions** dropdown shows disabled
+placeholders.
+
+Run `npm test`, `npm run lint`, and `npm run build` to verify the frontend.

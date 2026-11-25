@@ -1,26 +1,18 @@
 import { useCallback, useMemo, useState } from 'react'
-import {
-  buildGrid,
-  getAnswerCells,
-  getNestedWordCells,
-  getPuzzle,
-} from '../services/mockPuzzleService'
+import { buildGrid, getAnswerCells } from '../services/puzzleGrid'
+import useAnswerChecks from './useAnswerChecks'
 
 const keyOf = (cell) => `${cell.row},${cell.col}`
 
-export default function usePuzzleState() {
-  const puzzle = useMemo(() => getPuzzle(), [])
+export default function usePuzzleState(puzzle) {
   const grid = useMemo(() => buildGrid(puzzle), [puzzle])
   const [values, setValues] = useState({})
   const [hintCounts, setHintCounts] = useState({})
+  const checks = useAnswerChecks(puzzle, values, hintCounts)
+  const { lockedCells } = checks
   // The active cell and which direction we're typing in.
   const [active, setActive] = useState(null) // { row, col } | null
   const [direction, setDirection] = useState('across') // 'across' | 'down'
-
-  const matches = useCallback(
-    (cells) => cells.every((cell) => values[keyOf(cell)] === cell.letter),
-    [values],
-  )
 
   // Map every non-black cell to the across/down answers that cover it, so we
   // can find the word a clicked cell belongs to and know when a cell is shared.
@@ -36,46 +28,6 @@ export default function usePuzzleState() {
     }
     return index
   }, [puzzle])
-
-  const derived = useMemo(() => {
-    const completeAnswers = new Set()
-    const hintedCells = new Set()
-    const nestedDoneCells = new Set()
-    const lockedCells = new Set()
-    const nestedDone = {}
-
-    for (const entry of puzzle.answers) {
-      const cells = getAnswerCells(entry)
-      const complete = matches(cells)
-
-      if (complete) {
-        completeAnswers.add(entry.answer_id)
-        cells.forEach((cell) => lockedCells.add(keyOf(cell)))
-      }
-
-      const revealed = (entry.nested_words ?? []).slice(
-        0,
-        hintCounts[entry.answer_id] ?? 0,
-      )
-
-      nestedDone[entry.answer_id] = revealed.map((nested) => {
-        const nestedCells = getNestedWordCells(entry, nested)
-        const done = complete || matches(nestedCells)
-        nestedCells.forEach((cell) =>
-          (done ? nestedDoneCells : hintedCells).add(keyOf(cell)),
-        )
-        return done
-      })
-    }
-
-    return {
-      completeAnswers,
-      hintedCells,
-      nestedDoneCells,
-      lockedCells,
-      nestedDone,
-    }
-  }, [puzzle, matches, hintCounts])
 
   // The answer the active cell belongs to in the current direction (falling
   // back to the other direction if this cell only has one).
@@ -115,34 +67,27 @@ export default function usePuzzleState() {
     [cellIndex, active],
   )
 
-  // Advance the active cell one step along the current word (no wrap).
-  const advance = useCallback(
-    (step) => {
-      if (!activeEntry || !active) return
-      const cells = getAnswerCells(activeEntry)
-      const i = cells.findIndex((c) => keyOf(c) === keyOf(active))
-      const next = cells[i + step]
-      if (next) setActive({ row: next.row, col: next.col })
-    },
-    [activeEntry, active],
-  )
-
-  const setCell = (row, col, letter) => {
-    const key = `${row},${col}`
-    if (derived.lockedCells.has(key)) return
-    setValues((current) => ({ ...current, [key]: letter }))
-  }
+  // Advance to the next editable cell along the current word (no wrap).
+  const advance = useCallback(() => {
+    if (!activeEntry || !active) return
+    const cells = getAnswerCells(activeEntry)
+    const i = cells.findIndex((c) => keyOf(c) === keyOf(active))
+    const next = cells
+      .slice(i + 1)
+      .find((cell) => !lockedCells.has(keyOf(cell)))
+    if (next) setActive({ row: next.row, col: next.col })
+  }, [activeEntry, active, lockedCells])
 
   // Type a letter into the active cell and step forward.
   const typeLetter = useCallback(
     (letter) => {
       if (!active) return
       const key = keyOf(active)
-      if (derived.lockedCells.has(key)) return
+      if (lockedCells.has(key)) return
       setValues((current) => ({ ...current, [key]: letter }))
-      advance(1)
+      advance()
     },
-    [active, derived.lockedCells, advance],
+    [active, advance, lockedCells],
   )
 
   // Backspace: clear current cell, or if it's already empty, step back and
@@ -150,7 +95,7 @@ export default function usePuzzleState() {
   const backspace = useCallback(() => {
     if (!active || !activeEntry) return
     const key = keyOf(active)
-    if (derived.lockedCells.has(key)) return
+    if (lockedCells.has(key)) return
 
     if (values[key]) {
       setValues((current) => ({ ...current, [key]: '' }))
@@ -163,11 +108,10 @@ export default function usePuzzleState() {
     const prev = cells[i - 1]
     if (!prev) return
     const prevKey = keyOf(prev)
+    if (lockedCells.has(prevKey)) return
     setActive({ row: prev.row, col: prev.col })
-    if (!derived.lockedCells.has(prevKey)) {
-      setValues((current) => ({ ...current, [prevKey]: '' }))
-    }
-  }, [active, activeEntry, values, derived.lockedCells])
+    setValues((current) => ({ ...current, [prevKey]: '' }))
+  }, [active, activeEntry, lockedCells, values])
 
   // Arrow-key movement. Left/right force across, up/down force down.
   const move = useCallback(
@@ -200,7 +144,6 @@ export default function usePuzzleState() {
     puzzle,
     grid,
     values,
-    setCell,
     hintCounts,
     revealHint,
     // active-cell / navigation
@@ -211,6 +154,6 @@ export default function usePuzzleState() {
     typeLetter,
     backspace,
     move,
-    ...derived,
+    ...checks,
   }
 }
